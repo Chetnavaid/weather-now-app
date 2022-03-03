@@ -172,8 +172,16 @@ a:hover {
 
 .footer {
   text-align: center;
-  font-family: "Cabin", sans-serif;
-  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 12px;
-  padding: 10px;
+  padding: 14px;
+}
+
+#open-source-code {
+  text-decoration: none;
+  color: rgb(68, 0, 255);
+}
+
+#open-source-code:hover {
+  color: rgb(169, 243, 22);
 }
