@@ -1,0 +1,179 @@
+input {
+  padding-top: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Cabin", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding-bottom: -10px;
+}
+input:hover {
+  color: black;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+}
+a {
+  color: black;
+  transition: all 200ms ease-in-out;
+}
+a:hover {
+  color: rgb(255, 208, 0);
+}
+.container {
+  text-align: center;
+  background: linear-gradient(
+    109.6deg,
+    rgb(120, 212, 234) 11.2%,
+    rgb(216, 226, 253) 72.1%
+  );
+  width: 420px;
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.search-bar-ruler {
+  margin-top: 5px;
+  position: relative;
+  top: 2px;
+  left: 8px;
+}
+
+#current-location {
+  font-size: 24px;
+  transition: all 150ms ease-in-out;
+}
+
+#current-location:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.day-date {
+  font-family: "Cabin", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.time {
+  font-family: "Cabin", sans-serif;
+  font-size: 14px;
+}
+
+.cityName {
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 60px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  padding-top: 15px;
+}
+.weather-description {
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+#min-temp {
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+#max-temp {
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.last-time-updated {
+  font-family: "Cabin", sans-serif;
+  font-size: 14px;
+  padding-top: 2px;
+  text-align: center;
+}
+.weather-logo {
+  color: rgb(255, 230, 0);
+  font-size: 150px;
+  padding-bottom: 2px;
+}
+.live-temp {
+  font-size: 90px;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  padding-right: 45px;
+  padding-bottom: 5px;
+}
+.c-f {
+  font-family: "Cabin", sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  padding-top: 75px;
+  padding-right: 40px;
+}
+.line-1 {
+  margin-top: -12px;
+}
+.forecast-info {
+  font-family: "Cabin", sans-serif;
+}
+.precipitation-value {
+  position: relative;
+  left: -12px;
+}
+.humid {
+  position: relative;
+  left: -11px;
+}
+.humidity-value {
+  position: relative;
+  left: -68px;
+}
+.wind {
+  position: relative;
+  left: -23px;
+}
+.wind-speed {
+  position: relative;
+  left: -65px;
+}
+
+.forecast-icons {
+  font-size: 24px;
+  color: rgb(58, 56, 53);
+}
+
+.forecast {
+  font-family: "Cabin", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.day {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+.footer {
+  text-align: center;
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px;
+}
