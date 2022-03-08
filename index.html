@@ -27,98 +27,108 @@
   </head>
   <body>
     <div class="container">
-    <div class="weather-app">
-      <div class="row">
-        <div class="col-6">
-          <form class="my_form_id" id="search-city">
-            <input
-              type="text"
-              placeholder="Search City"
-              id="search-city-input"
-              autocomplete="off"
-            />
-          </form>
-          <hr class="search-bar-ruler" />
-        </div>
-        <div class="col-1" id="current-location">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-
-        <div class="col-5">
-          <div class="day-date" id="currentDate">
-            Wednesday, Feb 28 <br />17:24
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-6">
+            <form class="my_form_id" id="search-city">
+              <input
+                type="text"
+                placeholder="Search City"
+                id="search-city-input"
+                autocomplete="off"
+              />
+            </form>
+            <hr class="search-bar-ruler" />
           </div>
-        </div>
-
-        <div class="cityName" id="city-name">Dubai</div>
-        <div class="weather-description" id="weather-description">Sunny & Clear Skies</div>
-        <div span id="min-temp">19</span>
-        <span id="min-units">°</span> / <span id="max-temp"> 23</span><span id="max-units">°</span>
-        </div>
-        <div class="last-time-updated">updated 2 mins ago</div>
-      </div>
-      <div id="weather-icon">
-        <i class="fa-solid fa-sun"></i>
-      </div>
-
-      <div class="row">
-        <div class="col-8 live-temp">
-          <span id="current-temp">23</span><span class="units">°</span>
-        </div>
-        <div class="col-4 c-f">
-
-          <button id="celsius-link">°C</button> /
-          <button id="fahrenheit-link">°F</button>
-        </div>
-      </div>
-      <hr class="line-1" />
-      <div class="forecast-info">
-        <div class="row">
-          <div class="col-6 precipitaion">Precipitation</div>
-          <div class="col precipitation-value" id="precipitation-value">
-            0" in the last 24 hours
+          <div class="col-1" id="current-location">
+            <i class="fa-solid fa-location-dot"></i>
           </div>
+
+          <div class="col-5">
+            <div class="day-date" id="currentDate">
+              Wednesday, Feb 28 <br />17:24
+            </div>
+          </div>
+
+          <div class="cityName" id="city-name">Dubai</div>
+          <div class="weather-description" id="weather-description">
+            Sunny & Clear Skies
+          </div>
+
+          <div class="last-time-updated">updated 2 mins ago</div>
         </div>
-        <div class="row">
-          <div class="col-6 humid">Humidity</div>
-          <div class="col humidity-value"> <span id="humidity-value">50</span><span id="humidity-unit">%</div>
-        </div>
-        <div class="row">
-          <div class="col-6 wind">Wind</div>
-          <div class="col-6 wind-speed"> <span id="wind-speed">11</span> <span id="wind-unit">km/hr</span></div>
-        </div>
-      </div>
-      <hr />
-      <div class="row forecast-icons">
-        <div class="col-3 weather-icon">
-          <i class="fa-solid fa-cloud-sun"></i>
-        </div>
-        <div class="col-3 weather-icon">
-          <i class="fa-solid fa-cloud-showers-heavy"></i>
-        </div>
-        <div class="col-3 weather-icon">
-          <i class="fa-solid fa-cloud"></i>
-        </div>
-        <div class="col-3 weather-icon">
+        <div id="weather-icon">
           <i class="fa-solid fa-sun"></i>
         </div>
-      </div>
-      <div class="row daily-forecast">
-        <div class="col-3 forecast">18° / 21°</div>
-        <div class="col-3 forecast">17° / 25°</div>
-        <div class="col-3 forecast">16° / 22°</div>
-        <div class="col-3 forecast">19° / 23°</div>
-      </div>
-      <div class="row forecast-days">
-        <div class="col-3 day">Wed</div>
-        <div class="col-3 day">Thurs</div>
-        <div class="col-3 day">Fri</div>
-        <div class="col-3 day">Sat</div>
+
+        <div class="row">
+          <div class="col-8 live-temp">
+            <span id="current-temp">23</span><span class="units">°</span>
+          </div>
+          <div class="col-4 c-f">
+            <button id="celsius-link">°C</button> /
+            <button id="fahrenheit-link">°F</button>
+          </div>
+        </div>
+        <hr class="line-1" />
+        <div class="row forecast-data">
+          <div class="col-6">
+            <div class="min-temp">
+              <i class="fas fa-arrow-up"></i> <span id="min-temp"></span
+              ><span id="unit">°</span>
+            </div>
+            <div class="max-temp">
+              <i class="fas fa-arrow-down"></i> <span id="max-temp"></span
+              ><span id="unit">°</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="humid">
+              <strong>Humidity</strong> <span id="humidity-value"></span
+              ><span id="humidity-unit">%</span>
+            </div>
+            <div class="wind">
+              <strong> Wind</strong> <span id="wind-speed"> </span
+              ><span id="wind-unit">km/hr</span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row forecast-icons">
+          <div class="col-3 weather-icon">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <div class="col-3 weather-icon">
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+          </div>
+          <div class="col-3 weather-icon">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="col-3 weather-icon">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </div>
+        <div class="row daily-forecast">
+          <div class="col-3 forecast">18° / 21°</div>
+          <div class="col-3 forecast">17° / 25°</div>
+          <div class="col-3 forecast">16° / 22°</div>
+          <div class="col-3 forecast">19° / 23°</div>
+        </div>
+        <div class="row forecast-days">
+          <div class="col-3 day">Wed</div>
+          <div class="col-3 day">Thurs</div>
+          <div class="col-3 day">Fri</div>
+          <div class="col-3 day">Sat</div>
+        </div>
       </div>
     </div>
-    </div>
-   <div class="footer">
-      <a id="open-source-code" href="https://github.com/Chetnavaid/weather-now-app" target="_blank">Open-source code</a>
+    <div class="footer">
+      <a
+        id="open-source-code"
+        href="https://github.com/Chetnavaid/weather-now-app"
+        target="_blank"
+        >Open-source code</a
+      >
       by Chetna Vaidyanathan
     </div>
     <script src="src/script.js"></script>

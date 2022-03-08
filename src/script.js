@@ -76,6 +76,17 @@ function displayWeatherConditions(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  document.querySelector("#min-temp").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+
+  document.querySelector("#max-temp").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+
+  console.log(response.data);
+
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.innerHTML = `<i class= "${displayWeatherIcon(
     response.data.weather[0].icon

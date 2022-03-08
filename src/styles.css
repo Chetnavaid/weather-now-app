@@ -85,20 +85,6 @@ a:hover {
   letter-spacing: 1px;
 }
 
-#min-temp {
-  font-family: "Cabin", sans-serif;
-  font-size: 20px;
-  padding-top: 5px;
-  text-align: center;
-}
-
-#max-temp {
-  font-family: "Cabin", sans-serif;
-  font-size: 20px;
-  padding-top: 5px;
-  text-align: center;
-}
-
 .last-time-updated {
   font-family: "Cabin", sans-serif;
   font-size: 14px;
@@ -110,6 +96,7 @@ a:hover {
   font-size: 140px;
   padding-bottom: 2px;
 }
+
 .live-temp {
   font-size: 90px;
   font-family: "Cabin", sans-serif;
@@ -127,28 +114,49 @@ a:hover {
 .line-1 {
   margin-top: -12px;
 }
-.forecast-info {
+.forecast-data {
   font-family: "Cabin", sans-serif;
+  font-size: 15px;
 }
-.precipitation-value {
+#min-temp {
+  padding-top: 5px;
+  text-align: center;
   position: relative;
-  left: -12px;
+  left: 2px;
+}
+#max-temp {
+  padding-top: 5px;
+  text-align: center;
+  position: relative;
+  left: 2px;
+}
+#unit {
+  position: relative;
+  left: 2px;
 }
 .humid {
   position: relative;
-  left: -11px;
-}
-.humidity-value {
-  position: relative;
-  left: -70px;
+  left: -30px;
 }
 .wind {
   position: relative;
-  left: -23px;
+  left: -34px;
 }
-.wind-speed {
+#humidity-value {
   position: relative;
-  left: -58.5px;
+  left: 5px;
+}
+#wind-speed {
+  position: relative;
+  left: 5px;
+}
+#humidity-unit {
+  position: relative;
+  left: 6px;
+}
+#wind-unit {
+  position: relative;
+  left: 6px;
 }
 
 .forecast-icons {
