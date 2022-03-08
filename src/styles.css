@@ -141,7 +141,7 @@ a:hover {
 }
 .humidity-value {
   position: relative;
-  left: -68px;
+  left: -70px;
 }
 .wind {
   position: relative;
@@ -149,7 +149,7 @@ a:hover {
 }
 .wind-speed {
   position: relative;
-  left: -65px;
+  left: -58.5px;
 }
 
 .forecast-icons {
