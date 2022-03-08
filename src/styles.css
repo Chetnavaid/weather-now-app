@@ -29,7 +29,7 @@ a {
 a:hover {
   color: rgb(255, 208, 0);
 }
-.container {
+.weather-app {
   text-align: center;
   background: linear-gradient(
     109.6deg,
@@ -37,6 +37,7 @@ a:hover {
     rgb(216, 226, 253) 72.1%
   );
   width: 420px;
+  margin: 0 auto;
   margin-top: 50px;
   padding: 25px;
   border-radius: 20px;
