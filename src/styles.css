@@ -1,15 +1,13 @@
-input {
+#search-city-input {
   padding-top: 5px;
+  padding-left: 20px;
   border: none;
   outline: none;
   background: transparent;
-  font-family: "Cabin", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  font: "Cabin", sans-serif;
   text-transform: uppercase;
   padding-bottom: -10px;
-}
-input:hover {
-  color: black;
 }
 
 button {
@@ -44,14 +42,15 @@ a:hover {
 }
 
 .search-bar-ruler {
-  margin-top: 5px;
+  margin-top: 4px;
   position: relative;
-  top: 2px;
-  left: 8px;
+  top: 1px;
+  left: 10px;
+  width: 98%;
 }
 
 #current-location {
-  font-size: 24px;
+  font-size: 22px;
   transition: all 150ms ease-in-out;
 }
 
@@ -73,7 +72,7 @@ a:hover {
 .cityName {
   text-transform: uppercase;
   margin: 0 auto;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
   padding-top: 15px;
@@ -82,8 +81,8 @@ a:hover {
   font-family: "Cabin", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
-  letter-spacing: 0.5px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 #min-temp {
