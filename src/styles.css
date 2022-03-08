@@ -105,9 +105,9 @@ a:hover {
   padding-top: 2px;
   text-align: center;
 }
-.weather-logo {
-  color: rgb(255, 230, 0);
-  font-size: 150px;
+#weather-icon {
+  color: rgb(255, 238, 0);
+  font-size: 140px;
   padding-bottom: 2px;
 }
 .live-temp {

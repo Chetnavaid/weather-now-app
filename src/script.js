@@ -76,6 +76,52 @@ function displayWeatherConditions(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `<i class= "${displayWeatherIcon(
+    response.data.weather[0].icon
+  )}"></i>`;
+}
+
+function displayWeatherIcon(icon) {
+  let iconClass = "";
+  if (icon === "01d") {
+    iconClass = `fa-solid fa-sun`;
+  } else if (icon === "01n") {
+    iconClass = `fa-solid fa-moon`;
+  } else if (icon === "02d") {
+    iconClass = `fa-solid fa-cloud-sun`;
+  } else if (icon === "02n") {
+    iconClass = `fa-solid fa-cloud-moon`;
+  } else if (icon === "03d") {
+    iconClass = `fa-solid fa-cloud`;
+  } else if (icon === "03n") {
+    iconClass = `fa-solid fa-cloud`;
+  } else if (icon === "04d") {
+    iconClass = `fa-solid fa-cloud`;
+  } else if (icon === "04n") {
+    iconClass = `fa-solid fa-cloud`;
+  } else if (icon === "09d") {
+    iconClass = `fa-solid fa-cloud-showers-heavy`;
+  } else if (icon === "09n") {
+    iconClass = `fa-solid fa-cloud-showers-heavy`;
+  } else if (icon === "10d") {
+    iconClass = `fa-solid fa-cloud-sun-rain`;
+  } else if (icon === "10n") {
+    iconClass = `fa-solid fa-cloud-moon-rain`;
+  } else if (icon === "11d") {
+    iconClass = `fa-solid fa-bolt-lightning`;
+  } else if (icon === "11n") {
+    iconClass = `fa-solid fa-bolt-lightning`;
+  } else if (icon === "13d") {
+    iconClass = `fa-solid fa-snowflake`;
+  } else if (icon === "13n") {
+    iconClass = `fa-solid fa-snowflake`;
+  } else if (icon === "50d") {
+    iconClass = `fa-solid fa-smog`;
+  } else if (icon === "50n") {
+    iconClass = `fa-solid fa-smog`;
+  }
+  return iconClass;
 }
 
 function search(city) {
