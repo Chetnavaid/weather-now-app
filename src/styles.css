@@ -134,11 +134,12 @@ a:hover {
   font-family: "Cabin", sans-serif;
   font-size: 15px;
 }
+
 #min-temp {
   padding-top: 5px;
   text-align: center;
   position: relative;
-  left: 2px;
+  left: 4px;
 }
 #max-temp {
   padding-top: 5px;
@@ -146,9 +147,13 @@ a:hover {
   position: relative;
   left: 2px;
 }
-#unit {
+#unit-1 {
   position: relative;
   left: 2px;
+}
+#unit-2 {
+  position: relative;
+  left: 5px;
 }
 .humid {
   position: relative;
