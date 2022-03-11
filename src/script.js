@@ -44,7 +44,7 @@ updatedDate.innerHTML = formatDate(now);
 function formatTime(timestamp) {
   let date = new Date(timestamp);
   let minutes = date.getMinutes();
-  if (minutes < 2) {
+  if (0 < minutes && minutes < 2) {
     return `${minutes} min`;
   } else {
     return `${minutes} mins`;
