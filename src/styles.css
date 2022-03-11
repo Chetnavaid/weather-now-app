@@ -110,7 +110,23 @@ a:hover {
   font-size: 22px;
   padding-top: 75px;
   padding-right: 40px;
+  cursor: default;
+  color: rgb(0, 0, 0);
 }
+
+#celsius-link {
+  cursor: default;
+}
+
+#fahrenheit-link {
+  cursor: default;
+}
+
+.c-f .active {
+  cursor: default;
+  color: rgb(69, 15, 218);
+}
+
 .line-1 {
   margin-top: -12px;
 }
