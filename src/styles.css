@@ -136,13 +136,11 @@ a:hover {
 }
 
 #min-temp {
-  padding-top: 5px;
   text-align: center;
   position: relative;
   left: 4px;
 }
 #max-temp {
-  padding-top: 5px;
   text-align: center;
   position: relative;
   left: 2px;
