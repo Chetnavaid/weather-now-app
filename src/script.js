@@ -1,4 +1,4 @@
-function formatdate(currentdate) {
+function formatDate(currentdate) {
   let days = [
     "Sunday",
     "Monday",
@@ -39,7 +39,7 @@ function formatdate(currentdate) {
 let updatedDate = document.querySelector(".day-date");
 let now = new Date();
 
-updatedDate.innerHTML = formatdate(now);
+updatedDate.innerHTML = formatDate(now);
 
 function convertC() {
   let celsiusTemp = document.querySelector("#live-temp");
@@ -58,6 +58,16 @@ function convertF(event) {
 
 let fahrenheitButton = document.querySelector("#fahrenheit-link");
 fahrenheitButton.addEventListener("click", convertF);
+
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let minutes = date.getMinutes();
+  if (minutes < 2) {
+    return `${minutes} min`;
+  } else {
+    return `${minutes} mins`;
+  }
+}
 
 function displayWeatherConditions(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -85,7 +95,8 @@ function displayWeatherConditions(response) {
     response.data.main.temp_max
   );
 
-  console.log(response.data);
+  let timeElement = document.querySelector("#updated-time");
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
 
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.innerHTML = `<i class= "${displayWeatherIcon(
