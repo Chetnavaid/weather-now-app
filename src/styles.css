@@ -143,18 +143,22 @@ a:hover {
   left: -42px;
 }
 
-.forecast-icons {
+.forecast-icon {
   font-size: 24px;
   color: rgb(58, 56, 53);
 }
 
-.forecast {
+.forecast-temperature {
   font-family: "Cabin", sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
 
-.day {
+.forecast-temperature-min {
+  opacity: 0.75;
+}
+
+.forecast-day {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   font-size: 12px;
