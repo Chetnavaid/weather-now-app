@@ -51,6 +51,32 @@ function formatTime(timestamp) {
   }
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sat", "Sun", "Mon", "Tues"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-3">
+       <div class="forecast-icon">
+       <i class="fa-solid fa-cloud-sun"></i>
+       </div>
+       <div class="forecast-temperature">
+       <span class="forecast-temperature-max"> 21° </span>
+        / <span class="forecast-temperature-min"> 18°</span>
+        </div>
+       <div class="forecast-day">${day}</div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherConditions(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
 
@@ -172,6 +198,7 @@ let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
 search("Dubai");
+displayForecast();
 
 function searchLocation(position) {
   let lat = position.coords.latitude;
