@@ -51,64 +51,11 @@ function formatTime(timestamp) {
   }
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Sat", "Sun", "Mon", "Tues"];
-
-  let forecastHTML = `<div class="row">`;
-
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-3">
-       <div class="forecast-icon">
-       <i class="fa-solid fa-cloud-sun"></i>
-       </div>
-       <div class="forecast-temperature">
-       <span class="forecast-temperature-max"> 21° </span>
-        / <span class="forecast-temperature-min"> 18°</span>
-        </div>
-       <div class="forecast-day">${day}</div>
-    </div>`;
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
-function displayWeatherConditions(response) {
-  document.querySelector("#city-name").innerHTML = response.data.name;
-
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
-
-  document.querySelector("#humidity-value").innerHTML = Math.round(
-    response.data.main.humidity
-  );
-
-  document.querySelector("#wind-speed").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-
-  document.querySelector("#min-temp").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-
-  document.querySelector("#max-temp").innerHTML = Math.round(
-    response.data.main.temp_max
-  );
-
-  celsiusTemp = Math.round(response.data.main.temp);
-  document.querySelector("#current-temp").innerHTML = celsiusTemp;
-
-  let timeElement = document.querySelector("#updated-time");
-  timeElement.innerHTML = formatTime(response.data.dt * 1000);
-
-  let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `<i class= "${displayWeatherIcon(
-    response.data.weather[0].icon
-  )}"></i>`;
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
 }
 
 function displayWeatherIcon(icon) {
@@ -151,6 +98,79 @@ function displayWeatherIcon(icon) {
     iconClass = `fa-solid fa-smog`;
   }
   return iconClass;
+}
+
+function displayForecast(response) {
+  let dailyForecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  dailyForecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-3">
+       <div class="forecast-icon">
+       <i class="${displayWeatherIcon(forecastDay.weather[0].icon)}"></i>
+       </div>
+       <div class="forecast-temperature">
+       <span class="forecast-temperature-max"> ${Math.round(
+         forecastDay.temp.max
+       )}° </span>
+        / <span class="forecast-temperature-min"> ${Math.round(
+          forecastDay.temp.min
+        )}°</span>
+        </div>
+       <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
+    </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "ec5ec2c021874c86f5deaee5a915b6ee";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayWeatherConditions(response) {
+  document.querySelector("#city-name").innerHTML = response.data.name;
+
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
+
+  document.querySelector("#humidity-value").innerHTML = Math.round(
+    response.data.main.humidity
+  );
+
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+
+  document.querySelector("#min-temp").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
+
+  document.querySelector("#max-temp").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+
+  celsiusTemp = Math.round(response.data.main.temp);
+  document.querySelector("#current-temp").innerHTML = celsiusTemp;
+
+  let timeElement = document.querySelector("#updated-time");
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
+
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `<i class= "${displayWeatherIcon(
+    response.data.weather[0].icon
+  )}"></i>`;
+
+  getForecast(response.data.coord);
 }
 
 function convertF(event) {
@@ -198,7 +218,6 @@ let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
 search("Dubai");
-displayForecast();
 
 function searchLocation(position) {
   let lat = position.coords.latitude;
