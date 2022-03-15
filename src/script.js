@@ -173,34 +173,6 @@ function displayWeatherConditions(response) {
   getForecast(response.data.coord);
 }
 
-function convertF(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-
-  celsiusButton.classList.remove("active");
-  fahrenheitButton.classList.add("active");
-
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-let fahrenheitButton = document.querySelector("#fahrenheit-link");
-fahrenheitButton.addEventListener("click", convertF);
-
-function convertC(event) {
-  event.preventDefault();
-
-  celsiusButton.classList.add("active");
-  fahrenheitButton.classList.remove("active");
-
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = celsiusTemp;
-}
-
-let celsiusButton = document.querySelector("#celsius-link");
-celsiusButton.addEventListener("click", convertC);
-
-let celsiusTemp = null;
-
 function search(city) {
   let apiKey = "ec5ec2c021874c86f5deaee5a915b6ee";
   let units = "metric";
