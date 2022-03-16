@@ -33,7 +33,7 @@ function formatDate(currentdate) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day}, ${month} ${date} <br/>
+  return `<strong>${day}, ${month} ${date}</strong> <br/>
   ${hours}:${minutes}`;
 }
 let updatedDate = document.querySelector(".day-date");

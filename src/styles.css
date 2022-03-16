@@ -20,13 +20,7 @@ button {
 button:hover {
   cursor: pointer;
 }
-a {
-  color: black;
-  transition: all 200ms ease-in-out;
-}
-a:hover {
-  color: rgb(255, 208, 0);
-}
+
 .weather-app {
   text-align: center;
   background: linear-gradient(
@@ -62,17 +56,13 @@ a:hover {
 .day-date {
   font-family: "Cabin", sans-serif;
   font-size: 14px;
-  font-weight: bold;
-}
-.time {
-  font-family: "Cabin", sans-serif;
-  font-size: 14px;
 }
 
 .cityName {
   text-transform: uppercase;
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 38px;
+  text-align: center;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
   padding-top: 15px;
@@ -83,17 +73,19 @@ a:hover {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 1px;
+  padding-bottom: 2px;
 }
 
 .last-time-updated {
   font-family: "Cabin", sans-serif;
   font-size: 14px;
   padding-top: 2px;
+  padding-bottom: 15px;
   text-align: center;
 }
 #weather-icon {
   color: rgb(255, 238, 0);
-  font-size: 140px;
+  font-size: 145px;
   padding-bottom: 2px;
 }
 
@@ -133,7 +125,7 @@ a:hover {
 }
 .wind {
   position: relative;
-  left: -42px;
+  left: -40px;
 }
 
 .forecast-icon {
