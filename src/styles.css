@@ -154,7 +154,7 @@ button:hover {
 .footer {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   padding: 14px;
 }
 
@@ -173,5 +173,5 @@ button:hover {
 }
 
 #personal-website:hover {
-  color: rgb(255, 238, 0);
+  color: rgb(223, 28, 135);
 }
