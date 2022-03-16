@@ -166,3 +166,12 @@ button:hover {
 #open-source-code:hover {
   color: rgb(169, 243, 22);
 }
+
+#personal-website {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#personal-website:hover {
+  color: rgb(255, 238, 0);
+}
